@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('wakeup') {
+            steps {
+                echo 'I woke up'
+                echo 'I folded my blanket'
+            }
+        }
+        stage('brush') {
+            steps {
+                echo 'I started brushing'
+                echo 'I did tongue cleaning'
+                sh "mkdir -p output"
+            }
+        }
+        stage('bath') {
+            steps {
+                echo 'I took bath'
+                echo 'Forgot to do head bath'
+            }
+        }
+    }
+}
