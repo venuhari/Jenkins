@@ -11,7 +11,7 @@ pipeline {
         }
         stage('brush') {
             steps {
-                if (a != '11') {
+                if (a!='11') {
                    error "the davinci code"
                 }
                 echo 'I started brushing'
