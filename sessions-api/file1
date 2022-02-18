@@ -10,10 +10,12 @@ pipeline {
         }
         stage('brush') {
             steps {
+               script {
                 int a=10
                 if (a<11) {
                    error "the davinci code"
                 }
+               }
                 echo 'I started brushing'
                 echo 'I did tongue cleaning'
                 sh "mkdir -p output"
