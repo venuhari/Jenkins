@@ -1,3 +1,4 @@
+def a="10"
 pipeline {
     agent any
 
@@ -10,6 +11,9 @@ pipeline {
         }
         stage('brush') {
             steps {
+                if (a != '11') {
+                   error "the davinci code"
+                }
                 echo 'I started brushing'
                 echo 'I did tongue cleaning'
                 sh "mkdir -p output"
